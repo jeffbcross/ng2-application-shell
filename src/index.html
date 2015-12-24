@@ -33,12 +33,11 @@
 
 	<aside class="toast-view js-toast-view"></aside>
 
-	<script src="angular2-polyfills.js"></script>
-	<script src="./system.js"></script>
-	<script src="./vendor.js"></script>
-	<script src="./app.js"></script>
-	<script src="./app-shell.js" app="app"></script>
-
+	<script src="angular/bundles/angular2-polyfills.js"></script>
+	<script src="./systemjs/dist/system.js"></script>
+  <script>
+    System.import('./app-shell.js');
+  </script>
 </body>
 
 </html>

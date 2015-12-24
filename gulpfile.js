@@ -8,9 +8,14 @@ var config = {
 	staticFiles: [
 		'src/**/*',
 		'!src/**/*.ts',
-		'node_modules/systemjs/dist/system.js',
-		'node_modules/angular2/bundles/angular2-polyfills.js'
 		],
+  angular: 'node_modules/angular2/**/*.js',
+  typescript: 'node_modules/typescript/**/*.js',
+  rxjs: 'node_modules/rxjs/**/*.js',
+  'reflect-metadata': 'node_modules/reflect-metadata/**/*.js',
+  systemjs: 'node_modules/systemjs/**/*.js',
+  'zone.js': 'node_modules/zone.js/**/*.js',
+  firebase: 'node_modules/firebase/**/*.js',
 	dist: './dist',
 	system: {
 		configFile: 'system.config.js'
