@@ -1,6 +1,6 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {platform, provide} from 'angular2/core';
-import {ROUTER_PROVIDERS} from 'angular2/router';
+import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
 import {AuthService} from './services/Auth';
 import {Backend, BackendConfig} from './services/Backend';
@@ -14,6 +14,7 @@ bootstrap(App,[
 	ROUTER_PROVIDERS,
 	AuthService,
 	Backend,
+  provide(LocationStrategy, {useClass: HashLocationStrategy}),
 	provide(BackendConfig, {useValue: {url: FIREBASE_URL }})
 ]);
 
