@@ -2,8 +2,8 @@
 
 System.config({
 	map: {
-		// app: 'app',
-    angular2: 'angular'
+		app: 'app',
+    angular2: 'angular2'
 	},
   packages: {
     angular2: {
