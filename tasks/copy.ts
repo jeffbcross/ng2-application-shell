@@ -7,7 +7,7 @@ export const copy  = (gulp, config) => {
 		  .pipe(gulp.dest(config.dist));
 	});
 
-  gulp.task('copy:angular', makeCopyFn('angular'));
+  gulp.task('copy:angular', makeCopyFn('angular2'));
   gulp.task('copy:typescript', makeCopyFn('typescript'));
   gulp.task('copy:rxjs', makeCopyFn('rxjs'));
   gulp.task('copy:reflect-metadata', makeCopyFn('reflect-metadata'));

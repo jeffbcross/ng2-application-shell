@@ -9,7 +9,7 @@ var config = {
 		'src/**/*',
 		'!src/**/*.ts',
 		],
-  angular: 'node_modules/angular2/**/*.js',
+  angular2: 'node_modules/angular2/**/*.js',
   'angular-polyfills': 'node_modules/angular2/bundles/angular2-polyfills.min.js',
   typescript: 'node_modules/typescript/**/*.js',
   rxjs: 'node_modules/rxjs/**/*.js',
