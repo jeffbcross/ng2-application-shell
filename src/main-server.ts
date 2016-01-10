@@ -20,23 +20,25 @@ let root = path.join(path.resolve(__dirname, '..'));
 
 // Express View
 app.engine('.ng2.html', universal.ng2engine);
-app.set('views', __dirname);
+app.set('views', root);
 app.set('view engine', 'ng2.html');
+
+// Serve static files
+app.use(express.static(root));
 
 // Routes
 app.use('/', (req, res) => {
   res.render('index', { App, providers: [
     ROUTER_PROVIDERS,
     SERVER_LOCATION_PROVIDERS,
-	 AuthService,
-	 Backend,
-   provide(BASE_URL, {useValue: 'http://localhost:3000'}),
-	 provide(BackendConfig, {useValue: {url: FIREBASE_URL }})
+	  AuthService,
+	  Backend,
+    provide(BASE_URL, {useValue: 'http://localhost:3000'}),
+	  provide(BackendConfig, {useValue: {url: FIREBASE_URL }})
   ] });
 });
 
-// Serve static files
-app.use(express.static(root));
+
 
 // Server
 app.listen(3000, () => {
