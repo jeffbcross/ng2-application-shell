@@ -11,7 +11,7 @@ export const compile = (gulp, config) => {
       .pipe(ts({
         noImplicitAny: false,
         typescript: require('typescript'),
-        module: 'system',
+        module: 'commonjs',
         emitDecoratorMetadata: true,
         experimentalDecorators: true,
         moduleResolution: 'node'
