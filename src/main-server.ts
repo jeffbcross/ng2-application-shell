@@ -33,7 +33,7 @@ app.use('/', (req, res) => {
     SERVER_LOCATION_PROVIDERS,
 	  AuthService,
 	  Backend,
-    provide(BASE_URL, {useValue: 'http://localhost:3000'}),
+    provide(BASE_URL, {useValue: `http://localhost:3000${req.baseUrl}`}),
 	  provide(BackendConfig, {useValue: {url: FIREBASE_URL }})
   ] });
 });

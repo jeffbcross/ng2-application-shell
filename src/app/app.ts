@@ -18,15 +18,11 @@ import {About} from '../components/About';
 
 @Component({
 	selector: 'app',
-	providers: [Nav],
+	providers: [Backend, BackendConfig, Nav],
 	directives: [AppHeader, SideNav, Toast, ROUTER_DIRECTIVES],
 	template: `
-		<app-header class="header"></app-header>
-		<main class="main js-global-main" aria-role="main">
 			<router-outlet></router-outlet>
-		</main>
-		<toast-view #toast></toast-view>
-		<side-nav></side-nav>`,
+		`,
 })
 @RouteConfig([
 	new Route({ name: 'Home', component: Home, path: '/home', useAsDefault: true,  }),
